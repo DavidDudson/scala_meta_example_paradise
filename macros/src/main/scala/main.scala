@@ -1,8 +1,8 @@
 import scala.annotation.compileTimeOnly
 import scala.meta._
 
-@compileTimeOnly("@Main not expanded")
-class Main extends scala.annotation.StaticAnnotation {
+@compileTimeOnly("@main not expanded")
+class main extends scala.annotation.StaticAnnotation {
   inline def apply(defn: Defn) = meta {
     val q"object $name { ..$stats }" = defn
     val main = q"""
